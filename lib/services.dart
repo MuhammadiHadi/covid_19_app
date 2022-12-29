@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:covid_19_app/utils/app_url.dart';
-import 'package:flutter/material.dart';
+
 import 'package:http/http.dart' as http;
 
 import 'Model/WordStateModel.dart';

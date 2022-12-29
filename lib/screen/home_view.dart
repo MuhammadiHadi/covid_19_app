@@ -47,7 +47,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                         children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 30),
+                                horizontal: 20, vertical: 40),
                             child: PieChart(
                               dataMap: {
                                 "Total": double.parse(
@@ -57,8 +57,8 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                                 "Deaths": double.parse(
                                     snapshot.data!.deaths!.toString()),
                               },
-                              chartType: ChartType.ring,
-                              chartRadius: 150,
+                              chartType: ChartType.disc,
+                              chartRadius: 120,
                               colorList: ColorList,
                               chartValuesOptions: ChartValuesOptions(
                                 showChartValuesInPercentage: true,
@@ -111,7 +111,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (_) => CounterState()));
+                                      builder: (_) => CounterView()));
                             },
                             child: Container(
                               height: 45,
